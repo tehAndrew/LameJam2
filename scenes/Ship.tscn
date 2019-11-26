@@ -4,7 +4,7 @@
 [ext_resource path="res://rsc/Ship.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16.0714, 16.0714 )
+extents = Vector2( 16.0714, 12.9204 )
 
 [node name="Ship" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -12,5 +12,14 @@ script = ExtResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 608, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 2 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 608, 0 )
 shape = SubResource( 1 )
